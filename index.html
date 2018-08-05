@@ -5,23 +5,41 @@
     <meta name="viewport"
           content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <script src="//at.alicdn.com/t/font_601872_b3y2rtcwii6yldi.js"></script>
     <title>个人简历</title>
 </head>
 <body>
-<div class="topNavBar clearfix">
+<div id="site-welcome" class="site-welcome active">
+    <div class="loader"></div>
+</div>
+<div id="sticky" class="topNavBar clearfix">
     <a href="#" class="logo" alt="logo">
         <span class="rs">RS</span><span class="card">card</span>
     </a>
-    <nav>
+    <nav class="menuTigger">
         <ul class="clearfix">
             <li><a href="#">ABOUT</a></li>
             <li><a href="#">SKILLS</a></li>
             <li><a href="#">PORTFOLIO</a></li>
             <li><a href="#">EXPERIENCE</a></li>
-            <li><a href="#">PRICING</a></li>
-            <li><a href="#">BLOG</a></li>
+            <li>
+                <a href="#">PRICING</a>
+                <ul>
+                    <li>作品1</li>
+                    <li>作品2</li>
+                    <li>作品3</li>
+                </ul>
+            </li>
+            <li>
+                <a href="#">BLOG</a>
+                <ul>
+                    <li>作品1</li>
+                    <li>作品2</li>
+                    <li>作品3</li>
+                </ul>
+            </li>
             <li><a href="#">CALENDAR</a></li>
             <li><a href="#">CONTACT</a></li>
             <li><a href="#">OTHER</a></li>
@@ -92,31 +110,59 @@
             </a>
         </footer>
     </div>
-    <a class="button" href="#">下载 PDF 简历</a>
-        <p>
-            UCCS，前端工程师<br>
-            技能：前端开发
-        </p>
+    <p class="downloadResume-wrapper">
+        <a class="downloadResume" href="#" target="_blank" download="">下载 PDF 简历</a>
+    </p>
+    <p class="selfIntroduction">
+        UCCS，前端工程师<br>
+        技能：前端开发
+    </p>
 </main>
-<section>
+<section class="skills">
     <h2>技能</h2>
-    <ol>
-        <li>HTML 5 &amp; CSS 3</li>
-        <li>JavaScript</li>
-        <li>jQuery</li>
-        <li>Vue</li>
-        <li>React</li>
-        <li>HTTP</li>
+    <ol class="clearfix">
+        <li>
+            <h3>HTML 5 &amp; CSS 3</h3>
+            <div class="progressBar">
+            </div>
+        </li>
+        <li>
+            <h3>JavaScript</h3>
+            <div class="progressBar">
+            </div>
+        </li>
+        <li>
+            <h3>jQuery</h3>
+            <div class="progressBar">
+            </div>
+        </li>
+        <li>
+            <h3>Vue</h3>
+            <div class="progressBar">
+            </div>
+        </li>
+        <li>
+            <h3>React</h3>
+            <div class="progressBar">
+            </div>
+        </li>
+        <li>
+            <h3>HTTP</h3>
+            <div class="progressBar">
+            </div>
+        </li>
     </ol>
 </section>
-<section>
+
+<section class="portfolio">
     <h2>作品集</h2>
     <nav>
-        <ol>
-            <li>所有</li>
-            <li>框架</li>
-            <li>原生 JS&amp;CSS</li>
+        <ol id="portfolioWrap" class="clearfix">
+            <li id="portfolio1">所有</li>
+            <li id="portfolio2">框架</li>
+            <li id="portfolio3">原生 JS&amp;CSS</li>
         </ol>
+        <div id="portfolioBar" class="bar state-1"></div>
     </nav>
     <div class="jobs">
         <div class="big"></div>
@@ -125,5 +171,9 @@
     </div>
 </section>
 <script src="js/main.js"></script>
+<script>
+    var siteWelcome = document.getElementById('site-welcome')
+    siteWelcome.classList.remove('active');
+</script>
 </body>
 </html>
