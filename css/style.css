@@ -1,150 +1,96 @@
-ul > li {  list-style: none;  }
-* {  box-sizing: border-box;  padding: 0;  margin: 0;  }
-.clearfix::after {  content: '';  clear: both;  display: block;  }
-body{  background:#efefef;  }
+ul > li, ol > li {
+    list-style: none;
+}
+
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+
+.clearfix::after {
+    content: '';
+    clear: both;
+    display: block;
+}
+
+body {
+    background: #efefef;
+}
+
 .icon {
-    width: 1em; height: 1em;
+    width: 1em;
+    height: 1em;
     vertical-align: -0.15em;
     fill: currentColor;
     overflow: hidden;
 }
-a{
+
+a {
     text-decoration: none;
 }
-.topNavBar{
-    padding:17px 0 17px 17px;
-    /*background: rgba(0,0,0,0.5);*/
-    position: fixed; /*相对与屏幕定位，宽度会变小*/
-    top:0;
-    left:0;
-    width:100%;
-}
-.topNavBar > .logo {
-    float:left;
-    text-decoration: none;
-    font-size:24px;
-    font-family: Arial,sans-serif;
-    font-weight: bold;
-}
-.topNavBar > .logo > .rs{
-    margin-right:4px;
-    color:#e6686a;
-}
-.topNavBar > .logo > .card{
-    color:#9a9da2;
-}
-.topNavBar > nav{
-    float:right;
-}
-.topNavBar > nav > ul > li{
-    float: left;
-    margin-left:17px;
-    margin-right:17px;
-}
-.topNavBar > nav > ul > li > a {
-    font-size:12px;
-    color:#b7b7b7;
-    text-decoration: none;
-    font-weight:bold;
-    border-bottom: 3px solid transparent;
-    padding:5px 0;
-    display:block;
-}
-.topNavBar > nav > ul > li > a:hover {
-    border-bottom: 3px solid #e06567;
-}
-.banner{
-    background-image: url(../images/bg.jpg);
-    height: 515px;
-    background-position: center center;
-    background-size: cover;
-}
-.banner > .mask{
-    height:inherit;
-    background: rgba(0,0,0,0.5);
-}
 
-main .userCard{
-    max-width:940px;
-    margin: 0 auto;
-    background:white;
-}
-main .userCard .imgAndText{
-    padding:50px;
 
-}
-main .userCard img{
-    float: left;
-}
-main .userCard .text{
-    position:relative;
-    float: left;
-    margin-left:65px;
-    width:470px;
-}
-main .userCard .text .textDown {
-    position: absolute;
-    top:3px;
-    width: inherit;
-}
-main .userCard .text .welcome{
-    /*display: inline-block;*/
-    background: #e6686a;
-    color:white;
-    padding:4px 16px;
-    position:relative;
-}
-main .userCard .text .welcome::before {
-    content:'';
-    position:absolute;
-    border:10px solid transparent;
-    border-left-color: #e6686a;
-    border-top-width:0;
-    top:100%;
-    left:5px;
-}
-main .userCard .text h1{
-    margin:24px 0 6px 0;
 
-}
-main .userCard .text hr{
-    border:none;
-    border-top:1px solid #dedede;
-    height:0;
-    margin:20px 0;
-}
-main .userCard dl dt,
-main .userCard dl dd{
-    float:left;
-    padding:5px 0;
-}
-main .userCard dl dt{
-    width:30%;
-    font-weight:bold;
-}
-main .userCard dl dd {
-    width:70%;
-    color:#9da0a7;
-}
-main .userCard footer.media{
-    background: #e6686a;
-    text-align: center;
-}
-main .userCard footer.media svg{
-    width:30px;
-    height:30px;
-    fill:white;
-    vertical-align: top;
-}
-main .userCard footer.media a{
-    display: inline-block;
-    border-radius:50%;
-    width:40px;
-    height:40px;
-    line-height:30px;
-    padding:5px 0;
-    margin:16px;
-}
-main .userCard footer.media a:hover{
-    background:#cf5d5f;
-}
+.topNavBar {  padding: 17px 0 17px 17px;  position: fixed; /*相对与屏幕定位，宽度会变小*/  top: 0;  left: 0;  width: 100%;  transition:1s; color:#b7b7b7; }
+.topNavBar.sticky{  background:white;  padding:10px 0 10px 10px;  z-index: 1;  box-shadow: 0 2px 10px rgba(0,0,0,0.2);  color:#3d4451;  }
+.topNavBar > .logo {  float: left;  text-decoration: none;  font-size: 24px;  font-family: Arial, sans-serif;  font-weight: bold;  }
+.topNavBar > .logo > .rs {  margin-right: 4px;  color: #e6686a;  }
+.topNavBar > .logo > .card {  color: #9a9da2;  }
+.topNavBar > nav {  float: right;  }
+.topNavBar > nav > ul > li {  float: left;  margin-left: 17px;  margin-right: 17px;  position: relative; }
+.topNavBar > nav > ul > li > a {  font-size: 12px;  color: inherit;  text-decoration: none;  font-weight: bold;  border-bottom: 3px solid transparent;  padding: 5px 0;  display: block;  position: relative; }
+.topNavBar > nav > ul > li:hover > a::after{  content:'';  display: block;  position:absolute;  height: 3px;  width:100%;  top:100%;  left:0;  background: #e06567;  animation:menuSlide 0.3s linear;  }
+.topNavBar > nav > ul > li > ul{  position:absolute;  display: none;  top:100%;  right:0;  padding:5px 10px;  background: white;  box-shadow:0 0 10px rgba(0,0,0,0.5);  }
+.topNavBar > nav > ul > li.active > ul{  display: block;  animation:subMenuSlide 0.3s linear;  }
+.topNavBar > nav > ul > li.active > ul > li{  white-space: nowrap;  }
+
+@keyframes menuSlide{ 0%{  width:0;  } 100%{  width:100%;  } }
+@keyframes subMenuSlide { 0%{  margin-right:100%;  } 100%{  margin-right:0;  } }
+
+.banner {  background-image: url(../images/bg.jpg);  height: 515px;  background-position: center center;  background-size: cover;  }
+.banner > .mask {  height: inherit;  background: rgba(0, 0, 0, 0.5);  }
+
+body > main {  margin-top: -340px;  }
+main .userCard {  max-width: 940px;  margin: 0 auto;  background: white;  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.5);  }
+main .userCard .imgAndText {  padding:50px;  }
+main .userCard img {  float: left;  }
+main .userCard .text {  position: relative;  float: left;  margin-left: 65px;  width: 470px;  }
+main .userCard .text .textDown {  position: absolute;  top: 3px;  width: inherit;  }
+main .userCard .text .welcome {  background: #e6686a;  color: white;  padding: 4px 16px;  position: relative;  }
+main .userCard .text .welcome::before {  content: '';  position: absolute;  border: 10px solid transparent;  border-left-color: #e6686a;  border-top-width: 0;  top: 100%;  left: 5px;  }
+main .userCard .text h1 {  margin: 24px 0 6px 0;  }
+main .userCard .text hr {  border: none;  border-top: 1px solid #dedede;  height: 0;  margin: 20px 0;  }
+main .userCard dl dt, main .userCard dl dd {  float: left;  padding: 5px 0;  }
+main .userCard dl dt {  width: 30%;  font-weight: bold;  }
+main .userCard dl dd {  width: 70%;  color: #9da0a7;  }
+main .userCard footer.media {  background: #e6686a;  text-align: center;  }
+main .userCard footer.media svg {  width: 30px;  height: 30px;  fill: white;  vertical-align: top;  }
+main .userCard footer.media a {  display: inline-block;  border-radius: 50%;  width: 40px;  height: 40px;  line-height: 30px;  padding: 5px 0;  margin: 16px;  }
+main .userCard footer.media a:hover {  background: #cf5d5f;  }
+
+main .downloadResume {  font-size: 14px;  line-height: 16px;  padding: 21px 55px;  display: inline-block;  background: #efefef;  border: 1px solid #cdcfd1;  border-radius: 2px;  color: #3d4451;  font-weight: bold;  margin: 32px 0;  transition: 1s;  }
+main .downloadResume:hover {  box-shadow: 0 4px 13px rgba(0, 0, 0, 0.5)  }
+main .downloadResume-wrapper {  text-align: center;  }
+main .selfIntroduction {  max-width: 940px;  margin: 0 auto;  text-align: center;  }
+
+.skills, .portfolio{  max-width: 940px;  margin: 60px auto 0;  }
+.skills > h2, .portfolio > h2{  text-align: center;  color: #3d4451;  font-size: 34px;  line-height: 1.2;  font-weight: 600;  }
+.skills ol {  background: white;  box-shadow: 0 1px 5px rgba(0, 0, 0, 0.5);  padding: 42px 50px 10px;  margin-top: 30px;  }
+.skills > ol > li {  float: left;  width: 48%;  }
+.skills > ol > li:nth-child(odd) {  float: right;  }
+.skills h3 {  font-weight: normal;  font-size: 14px;  line-height: 1.1;  }
+.skills .progressBar {  height: 5px;  background: #fae1e1;  position: relative;  border-radius: 2px;  margin: 4px 0 40px;  }
+.skills .progressBar::before {  content: '';  position: absolute;  width: 70%;  height: 100%;  background: #e6686a;  }
+
+.portfolio{  text-align: center;  }
+.portfolio > nav{  display: inline-block;  margin-top:30px;  }
+.portfolio > nav > ol{  display: inline-block;  vertical-align: top;  }
+.portfolio > nav > ol > li{  margin-left:40px;  float:left;  cursor: pointer;  }
+.portfolio > nav > ol > li:first-child{  margin-left:0;  }
+.portfolio .bar{  background:white;  margin:5px 0 50px;  height:5px;  border-radius:3px;  position: relative;  }
+.portfolio .bar::before{  content:'';  position: absolute;  height:100%;  background:#e6686a;  border-radius:3px;  transition:0.3s;  }
+.portfolio .state-1::before{  width:15%;  left:0;  }
+.portfolio .state-2::before{  width:15%;  left:70px;  }
+.portfolio .state-3::before{  width:41%;  left:140px;  }
+
