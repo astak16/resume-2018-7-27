@@ -8,10 +8,10 @@
     <link rel="stylesheet" href="css/loader.css">
     <link rel="stylesheet" href="css/style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/css/swiper.min.css">
+    <link rel="stylesheet" href="//at.alicdn.com/t/font_601872_62vhhuc3ze2.css">
     <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/4.3.5/js/swiper.min.js"></script>
-    <script src="//at.alicdn.com/t/font_601872_b3y2rtcwii6yldi.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/tween.js/17.2.0/Tween.min.js"></script>
-
+    <script src="//at.alicdn.com/t/font_601872_62vhhuc3ze2.js"></script>
     <title>个人简历</title>
 </head>
 <body>
@@ -195,12 +195,65 @@
         </div>
 
     </div>
-    </section>
+</section>
+<section class="messages">
+
+    <div class="message">
+        <h2>留言</h2>
+        <form action="">
+            <div class="reviewTittle clearfix">
+                <span>评论</span>
+                <span class="newMessages">（共178054条评论）</span>
+            </div>
+            <div class="writeReviewWrapper">
+                <input type="text" name="userName">
+                <div class="writeReview">
+                    <textarea name="content" placeholder="留言"></textarea>
+                    <input type="submit" value="发表">
+                </div>
+            </div>
+        </form>
+        <h3>最新评论<span class="newMessages">(178054)</span></h3>
+        <ol class="ol">
+
+            <!--回复人家-->
+            <!--<li>-->
+                <!--<div class="userInformation">-->
+                    <!--<div class="userContentUp">-->
+                        <!--<span class="userName">天天：</span>-->
+                        <!--<span class="leaveMessage">事实上很多人类社会中的组织都是模块化的，只有模块化才能更好的分工，实现specialization，提高效率。-->
+    <!--另，其实计算机中的很多概念，包括模块化，都是模拟人类社会学来的，比如hyperlink就是来自人的associative memory。计算机本来就是人的发明，不可能脱离人而单独存在</span>-->
+                    <!--</div>-->
+                    <!--<div class="userContentMiddle">-->
+                        <!--<span class="userNamePrompt">@天天：</span>-->
+                        <!--<span class="leaveMessagePrompt">事实上很多人类社会中的组织都是模块化的，只有模块化才能更好的分工，实现specialization，提高效率。-->
+    <!--另，其实计算机中的很多概念，包括模块化，都是模拟人类社会学来的，比如hy</span>-->
+                    <!--</div>-->
+                    <!--<div class="userContentDown clearfix">-->
+                        <!--<div class="upData">2018年8月17日 02：12</div>-->
+                        <!--<div class="replyLike">-->
+                            <!--<svg class="icon like" aria-hidden="true">-->
+                                <!--<use xlink:href="#icon-zan2"></use>-->
+                            <!--</svg>(10)-->
+                            <!--<span class="verticalLine">|</span>-->
+                            <!--<span class="reply">回复</span>-->
+                        <!--</div>-->
+                    <!--</div>-->
+                <!--</div>-->
+            <!--</li>-->
+        </ol>
+    </div>
+</section>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
 <script src="js/drop-down-menu.js"></script>
 <script src="js/auto-slide-up.js"></script>
 <script src="js/scrolling-page-effect.js"></script>
 <script src="js/collection.js"></script>
 <script src="js/init-swiper.js"></script>
+<script src="//cdn.jsdelivr.net/npm/leancloud-storage@3.10.0/dist/av-min.js"></script>
+<!--<script src="//cdn.jsdelivr.net/npm/leancloud-realtime@4.2.0/dist/realtime.browser.min.js"></script>-->
+<script src="js/messages.js"></script>
+
 <script>
     var siteWelcome = document.getElementById('site-welcome')
     siteWelcome.classList.remove('active');

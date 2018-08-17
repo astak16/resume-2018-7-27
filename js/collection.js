@@ -9,7 +9,7 @@
             this.bindEvents(view)
         },
         bindEvents:function(view){
-            console.log(this.children)
+            // console.log(this.children)
             for(let i = 0; i < this.children.length; i++){
                 this.array.push(this.children[i])
             }
